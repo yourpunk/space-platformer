@@ -1,3 +1,6 @@
 background.png
 libgdx.png
 title.png
+uiskin.atlas
+uiskin.json
+uiskin.png
