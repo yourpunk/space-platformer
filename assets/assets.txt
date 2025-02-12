@@ -1,4 +1,8 @@
 background.png
+default.fnt
+default.png
+font.fnt
+font.png
 libgdx.png
 title.png
 uiskin.atlas
