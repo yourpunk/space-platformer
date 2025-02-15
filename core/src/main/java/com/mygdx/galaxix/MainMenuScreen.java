@@ -3,6 +3,7 @@ package com.mygdx.galaxix;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Music;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -23,6 +24,8 @@ public class MainMenuScreen implements Screen {
     private Texture background;
     private Texture titleTexture;
     private SpriteBatch batch;
+    private Sound hoverSound;
+    private Sound clickSound;
 
     public MainMenuScreen(final Main game) {
         this.game = game;
@@ -36,6 +39,8 @@ public class MainMenuScreen implements Screen {
         skin = new Skin(Gdx.files.internal("ui.json"));
 
         backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("mainMenu.mp3"));
+        hoverSound = Gdx.audio.newSound(Gdx.files.internal("hoverMenu.wav"));
+        clickSound = Gdx.audio.newSound(Gdx.files.internal("clickMenu.wav"));
         backgroundMusic.setLooping(true);
         backgroundMusic.setVolume(2f);
         backgroundMusic.play();
@@ -43,34 +48,27 @@ public class MainMenuScreen implements Screen {
         table.setFillParent(true);
         stage.addActor(table);
 
-        TextButton newGameButton = new TextButton("New Game", skin, "basicButtonStyle");
-        newGameButton.addListener(new ClickListener() {
-            @Override
-            public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
-                System.out.println("Start Game");
-            }
+
+        GameButton newGameButton = new GameButton("New Game", skin, "default",
+                "hoverMenu.wav", "clickMenu.wav", () -> {
+            System.out.println("Starting new game...");
         });
 
-        TextButton loadGameButton = new TextButton("Load Game", skin, "basicButtonStyle");
-        loadGameButton.addListener(new ClickListener() {
-            @Override
-            public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
-                System.out.println("Load Game");
-            }
+        GameButton loadGameButton = new GameButton("Load Game", skin, "default",
+                "hoverMenu.wav", "clickMenu.wav", () -> {
+            System.out.println("Loading game...");
         });
 
-        TextButton exitButton = new TextButton("Exit", skin, "narrowButtonStyle");
-        exitButton.addListener(new ClickListener() {
-            @Override
-            public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
-                Gdx.app.exit();
-            }
+        GameButton exitButton = new GameButton("Exit", skin, "default",
+                "hoverMenu.wav", "clickMenu.wav", () -> {
+            Gdx.app.exit();
         });
+        table.padTop(150);
 
+        table.add(newGameButton).width(200).height(64).padBottom(16).row();
+        table.add(loadGameButton).width(200).height(64).padBottom(16).row();
+        table.add(exitButton).width(200).height(64).row();
 
-        table.add(newGameButton).padBottom(20).row();
-        table.add(loadGameButton).padBottom(20).row();
-        table.add(exitButton).row();
     }
 
     @Override
