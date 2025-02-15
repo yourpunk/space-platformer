@@ -33,50 +33,44 @@ public class MainMenuScreen implements Screen {
         background = new Texture("background.png");
         titleTexture = new Texture("title.png");
 
-        skin = new Skin(Gdx.files.internal("uiskin.json"));
+        skin = new Skin(Gdx.files.internal("ui.json"));
 
         backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("mainMenu.mp3"));
         backgroundMusic.setLooping(true);
-        backgroundMusic.setVolume(0.5f);
+        backgroundMusic.setVolume(2f);
         backgroundMusic.play();
-
         Table table = new Table();
         table.setFillParent(true);
         stage.addActor(table);
 
-
-        TextButton newGameButton = new TextButton("New Game", skin);
+        TextButton newGameButton = new TextButton("New Game", skin, "basicButtonStyle");
         newGameButton.addListener(new ClickListener() {
             @Override
-            public void clicked(InputEvent event, float x, float y) {
-              //  game.setScreen(new GameScreen(game));
+            public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
+                System.out.println("Start Game");
             }
         });
 
-
-        TextButton loadGameButton = new TextButton("Load Game", skin);
+        TextButton loadGameButton = new TextButton("Load Game", skin, "basicButtonStyle");
         loadGameButton.addListener(new ClickListener() {
             @Override
-            public void clicked(InputEvent event, float x, float y) {
-                System.out.println("Load Game button pressed!");
+            public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
+                System.out.println("Load Game");
             }
         });
 
-
-        TextButton exitButton = new TextButton("Exit", skin);
+        TextButton exitButton = new TextButton("Exit", skin, "narrowButtonStyle");
         exitButton.addListener(new ClickListener() {
             @Override
-            public void clicked(InputEvent event, float x, float y) {
+            public void clicked(com.badlogic.gdx.scenes.scene2d.InputEvent event, float x, float y) {
                 Gdx.app.exit();
             }
         });
 
 
-        table.add(newGameButton).fillX().uniformX().pad(10);
-        table.row();
-        table.add(loadGameButton).fillX().uniformX().pad(10);
-        table.row();
-        table.add(exitButton).fillX().uniformX().pad(10);
+        table.add(newGameButton).padBottom(20).row();
+        table.add(loadGameButton).padBottom(20).row();
+        table.add(exitButton).row();
     }
 
     @Override
