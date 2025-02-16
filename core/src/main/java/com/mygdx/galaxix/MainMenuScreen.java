@@ -24,8 +24,6 @@ public class MainMenuScreen implements Screen {
     private Texture background;
     private Texture titleTexture;
     private SpriteBatch batch;
-    private Sound hoverSound;
-    private Sound clickSound;
 
     public MainMenuScreen(final Main game) {
         this.game = game;
@@ -39,8 +37,6 @@ public class MainMenuScreen implements Screen {
         skin = new Skin(Gdx.files.internal("ui.json"));
 
         backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("mainMenu.mp3"));
-        hoverSound = Gdx.audio.newSound(Gdx.files.internal("hoverMenu.wav"));
-        clickSound = Gdx.audio.newSound(Gdx.files.internal("clickMenu.wav"));
         backgroundMusic.setLooping(true);
         backgroundMusic.setVolume(2f);
         backgroundMusic.play();
@@ -49,18 +45,15 @@ public class MainMenuScreen implements Screen {
         stage.addActor(table);
 
 
-        GameButton newGameButton = new GameButton("New Game", skin, "default",
-                "hoverMenu.wav", "clickMenu.wav", () -> {
+        GameButton newGameButton = new GameButton("New Game", skin, "default", () -> {
             System.out.println("Starting new game...");
         });
 
-        GameButton loadGameButton = new GameButton("Load Game", skin, "default",
-                "hoverMenu.wav", "clickMenu.wav", () -> {
+        GameButton loadGameButton = new GameButton("Load Game", skin, "default",() -> {
             System.out.println("Loading game...");
         });
 
-        GameButton exitButton = new GameButton("Exit", skin, "default",
-                "hoverMenu.wav", "clickMenu.wav", () -> {
+        GameButton exitButton = new GameButton("Exit", skin, "default",() -> {
             Gdx.app.exit();
         });
         table.padTop(150);

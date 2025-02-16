@@ -11,12 +11,14 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 public class GameButton extends TextButton {
     private Sound hoverSound;
     private Sound clickSound;
+    private boolean isHovered = false;
 
-    public GameButton(String text, Skin skin, String style, String hoverSoundPath, String clickSoundPath, Runnable action) {
+
+    public GameButton(String text, Skin skin, String style, Runnable action) {
         super(text, skin, style);
 
-        hoverSound = Gdx.audio.newSound(Gdx.files.internal(hoverSoundPath));
-        clickSound = Gdx.audio.newSound(Gdx.files.internal(clickSoundPath));
+        hoverSound = Gdx.audio.newSound(Gdx.files.internal("hoverMenu.wav"));
+        clickSound = Gdx.audio.newSound(Gdx.files.internal("clickMenu.wav"));
 
         addListener(new ClickListener() {
             public void clicked(InputEvent event, float x, float y) {
@@ -26,8 +28,17 @@ public class GameButton extends TextButton {
                 }
             }
 
+            @Override
             public void enter(InputEvent event, float x, float y, int pointer, Actor fromActor) {
-                hoverSound.play();
+                if (!isHovered) {
+                    hoverSound.play();
+                    isHovered = true;
+                }
+            }
+
+            @Override
+            public void exit(InputEvent event, float x, float y, int pointer, Actor toActor) {
+                isHovered = false;
             }
         });
     }
