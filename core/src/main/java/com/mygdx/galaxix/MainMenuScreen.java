@@ -47,6 +47,7 @@ public class MainMenuScreen implements Screen {
 
         GameButton newGameButton = new GameButton("New Game", skin, "default", () -> {
             System.out.println("Starting new game...");
+            game.setScreen(new Level1Screen(game));
         });
 
         GameButton loadGameButton = new GameButton("Load Game", skin, "default",() -> {

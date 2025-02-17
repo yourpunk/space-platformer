@@ -19,10 +19,9 @@ public class GameButton extends TextButton {
 
         hoverSound = Gdx.audio.newSound(Gdx.files.internal("hoverMenu.wav"));
         clickSound = Gdx.audio.newSound(Gdx.files.internal("clickMenu.wav"));
-
         addListener(new ClickListener() {
             public void clicked(InputEvent event, float x, float y) {
-                clickSound.play();
+                clickSound.play(0.3f);
                 if (action != null) {
                     action.run();
                 }
@@ -31,7 +30,7 @@ public class GameButton extends TextButton {
             @Override
             public void enter(InputEvent event, float x, float y, int pointer, Actor fromActor) {
                 if (!isHovered) {
-                    hoverSound.play();
+                    hoverSound.play(0.5f);
                     isHovered = true;
                 }
             }
