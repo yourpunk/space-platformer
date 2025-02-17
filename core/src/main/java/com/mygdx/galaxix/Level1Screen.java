@@ -25,7 +25,7 @@ public class Level1Screen extends ScreenAdapter {
         camera = new OrthographicCamera();
         camera.setToOrtho(false, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         batch = new SpriteBatch();
-        //background = new Texture("2.png");
+        background = new Texture("level1.png");
         map = new TmxMapLoader().load("maps/level1.tmx");
         mapRenderer = new OrthogonalTiledMapRenderer(map);
     }
@@ -38,9 +38,9 @@ public class Level1Screen extends ScreenAdapter {
         mapRenderer.setView(camera);
 
         batch.setProjectionMatrix(camera.combined);
-       // batch.begin();
-       // batch.draw(background, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-        //batch.end();
+       batch.begin();
+        batch.draw(background, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+        batch.end();
 
         mapRenderer.render();
     }
