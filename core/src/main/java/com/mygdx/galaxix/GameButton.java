@@ -12,13 +12,15 @@ public class GameButton extends TextButton {
     private Sound hoverSound;
     private Sound clickSound;
     private boolean isHovered = false;
+    private Runnable action;
 
 
     public GameButton(String text, Skin skin, String style, Runnable action) {
         super(text, skin, style);
+        this.action = action;
 
-        hoverSound = Gdx.audio.newSound(Gdx.files.internal("hoverMenu.wav"));
-        clickSound = Gdx.audio.newSound(Gdx.files.internal("clickMenu.wav"));
+        hoverSound = Gdx.audio.newSound(Gdx.files.internal("music/hoverMenu.wav"));
+        clickSound = Gdx.audio.newSound(Gdx.files.internal("music/clickMenu.wav"));
         addListener(new ClickListener() {
             public void clicked(InputEvent event, float x, float y) {
                 clickSound.play(0.3f);

@@ -31,12 +31,12 @@ public class MainMenuScreen implements Screen {
         Gdx.input.setInputProcessor(stage);
 
         batch = new SpriteBatch();
-        background = new Texture("background.png");
-        titleTexture = new Texture("title.png");
+        background = new Texture("backgrounds/menu.png");
+        titleTexture = new Texture("interface/title.png");
 
-        skin = new Skin(Gdx.files.internal("ui.json"));
+        skin = new Skin(Gdx.files.internal("interface/ui.json"));
 
-        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("mainMenu.mp3"));
+        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("music/mainMenu.mp3"));
         backgroundMusic.setLooping(true);
         backgroundMusic.setVolume(2f);
         backgroundMusic.play();

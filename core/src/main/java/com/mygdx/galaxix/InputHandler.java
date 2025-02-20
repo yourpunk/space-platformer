@@ -1,12 +1,11 @@
 package com.mygdx.galaxix;
 
 import com.badlogic.gdx.Input;
-import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.InputProcessor;
 
 public class InputHandler implements InputProcessor {
-    private boolean inMenu = true; // Флаг состояния
-    private Runnable onStartGame; // Callback для старта игры
+    private boolean inMenu = true;
+    private Runnable onStartGame;
 
     public InputHandler(Runnable onStartGame) {
         this.onStartGame = onStartGame;
