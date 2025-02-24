@@ -27,9 +27,9 @@ public class Player {
     public Player(float x, float y) {
         position = new Vector2(x, y);
         velocity = new Vector2(0, 0);
-        bounds = new Rectangle(x, y, 32, 32); // Размер игрока
+        bounds = new Rectangle(x, y, 32, 32);
 
-        spriteSheet = new Texture("player_walk.png");
+        spriteSheet = new Texture("player/idle/idle1.png");
         TextureRegion[][] tmp = TextureRegion.split(spriteSheet, 32, 32);
         Array<TextureRegion> frames = new Array<>();
 
