@@ -1,36 +1,51 @@
-# GalaxiX
+# 🚀 GalaxiX - a space adventure game!
+## 🎮 Game Description
+**GalaxiX** is a thrilling pixel-art 2D platformer set in deep space.
+You take on the role of a lone space explorer, stranded in an abandoned sector of the galaxy.
+To escape, you must navigate hazardous environments, fight cosmic creatures, and uncover the secrets of a lost civilization.
 
-A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
+### 🌌 Survive, fight, and find your way home! 🌌
 
-This project was generated with a template including simple application launchers and an `ApplicationAdapter` extension that draws libGDX logo.
+## 📌 Features
+* 🌠 Exploration – traverse alien planets, derelict space stations, and asteroid fields.
+* ⚔️ Combat System – battle against space anomalies and rogue machines.
+* 🪐 Puzzle Mechanics – solve environmental challenges to progress.
+* 🎵 Immersive Soundtrack – dynamic music that adapts to the gameplay.
+* 🛸 Power-ups & Upgrades – enhance your abilities and unlock new gear.
+  
+##🛠️ Technologies Used
+* **Java & LibGDX** – game logic, physics, and rendering.
+* **Tiled** – level design and tile-based map system.
+* **Skin Composer** – custom GUI elements and menu design.
+* **JSON** – game data serialization for player progress.
 
-## Platforms
+## 🎨 Screenshots
+(Add cool in-game screenshots here!)
 
-- `core`: Main module with the application logic shared by all platforms.
-- `lwjgl3`: Primary desktop platform using LWJGL3; was called 'desktop' in older docs.
-- `lwjgl2`: Legacy desktop platform using LWJGL2.
+## 🛠️ Setup & Usage
+### 📌 Requirements:
+- Java 17+
+- Gradle installed (optional, the game includes a Gradle wrapper).
+### 🚀 How to Run
+1. Clone the repository:
+  ```sh
+  git clone https://github.com/yourusername/GalaxiX.git
+  cd GalaxiX
+```
+2. Run the game using Gradle:
+  ```sh
+  ./gradlew lwjgl2:run
+  ```
+(Windows users: gradlew.bat lwjgl2:run)
 
-## Gradle
+## 📜 Notes
+This game was initially developed as a personal project to improve game development skills using LibGDX and Java. It continues to evolve as part of a growing portfolio.
 
-This project uses [Gradle](https://gradle.org/) to manage dependencies.
-The Gradle wrapper was included, so you can run Gradle tasks using `gradlew.bat` or `./gradlew` commands.
-Useful Gradle tasks and flags:
+## 👥 Contributors
+Developed by Aleksandra Soboleva.
+Special thanks to everyone who provided feedback and support!
 
-- `--continue`: when using this flag, errors will not stop the tasks from running.
-- `--daemon`: thanks to this flag, Gradle daemon will be used to run chosen tasks.
-- `--offline`: when using this flag, cached dependency archives will be used.
-- `--refresh-dependencies`: this flag forces validation of all dependencies. Useful for snapshot versions.
-- `build`: builds sources and archives of every project.
-- `cleanEclipse`: removes Eclipse project data.
-- `cleanIdea`: removes IntelliJ project data.
-- `clean`: removes `build` folders, which store compiled classes and built archives.
-- `eclipse`: generates Eclipse project data.
-- `idea`: generates IntelliJ project data.
-- `lwjgl2:jar`: builds application's runnable jar, which can be found at `lwjgl2/build/libs`.
-- `lwjgl2:run`: starts the application.
-- `lwjgl3:jar`: builds application's runnable jar, which can be found at `lwjgl3/build/libs`.
-- `lwjgl3:run`: starts the application.
-- `test`: runs unit tests (if any).
+### 📩 Feel free to reach out with questions or suggestions!
 
-Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should be replaced with the ID of a specific project.
-For example, `core:clean` removes `build` folder only from the `core` project.
+
+# 🔥 The galaxy awaits, pilot… Prepare for launch! 🚀
