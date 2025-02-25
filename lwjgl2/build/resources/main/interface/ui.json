@@ -1,0 +1,108 @@
+{
+com.badlogic.gdx.graphics.g2d.BitmapFont: {
+	font: {
+		file: font.fnt
+		scaledSize: -1
+		markupEnabled: false
+		flip: false
+	}
+}
+com.badlogic.gdx.graphics.Color: {
+	RGBA_108_33_151_255: {
+		r: 0.42352942
+		g: 0.12941177
+		b: 0.5921569
+		a: 1
+	}
+	RGBA_116_29_143_255: {
+		r: 0.45490196
+		g: 0.11372549
+		b: 0.56078434
+		a: 1
+	}
+	RGBA_231_73_161_255: {
+		r: 1
+		g: 0.5568628
+		b: 0.64705884
+		a: 1
+	}
+	RGBA_249_239_65_255: {
+		r: 0.9764706
+		g: 0.9372549
+		b: 0.25490198
+		a: 1
+	}
+	RGBA_255_255_255_255: {
+		r: 1
+		g: 1
+		b: 0.71910113
+		a: 1
+	}
+	RGBA_38_24_50_255: {
+		r: 0.14901961
+		g: 0.09411765
+		b: 0.19607843
+		a: 1
+	}
+	RGBA_72_29_167_255: {
+		r: 0.28235295
+		g: 0.11372549
+		b: 0.654902
+		a: 1
+	}
+	RGBA_95_49_107_255: {
+		r: 0.37254903
+		g: 0.19215687
+		b: 0.41960785
+		a: 1
+	}
+}
+com.kotcrab.vis.ui.Sizes: {
+	default: {
+		scaleFactor: 1
+		spacingBottom: 8
+		spacingRight: 6
+		buttonBarSpacing: 10
+		menuItemIconSize: 22
+		borderSize: 1
+		spinnerButtonHeight: 12
+		spinnerFieldSize: 50
+		fileChooserViewModeBigIconsSize: 200
+		fileChooserViewModeMediumIconsSize: 128
+		fileChooserViewModeSmallIconsSize: 64
+		fileChooserViewModeListWidthSize: 150
+	}
+}
+com.kotcrab.vis.ui.widget.Separator$SeparatorStyle: {
+	default: {
+		thickness: 4
+	}
+	menu: {
+		thickness: 1
+	}
+}
+com.kotcrab.vis.ui.widget.tabbedpane.TabbedPane$TabbedPaneStyle: {
+	default: {
+		vertical: false
+		draggable: false
+	}
+}
+com.kotcrab.vis.ui.widget.BusyBar$BusyBarStyle: {
+	default: {
+		height: 5
+		segmentWidth: 150
+		segmentOverflow: 10
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
+	default: {
+		font: font
+		fontColor: RGBA_255_255_255_255
+		downFontColor: RGBA_249_239_65_255
+		overFontColor: RGBA_249_239_65_255
+		up: basic orange button
+		down: basic purple button
+		over: basic purple button
+	}
+}
+}
