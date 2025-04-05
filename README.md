@@ -13,14 +13,14 @@ To escape, you must navigate hazardous environments, fight cosmic creatures, and
 * 🎵 Immersive Soundtrack – dynamic music that adapts to the gameplay.
 * 🛸 Power-ups & Upgrades – enhance your abilities and unlock new gear.
   
-##🛠️ Technologies Used
+## 🛠️ Technologies Used
 * **Java & LibGDX** – game logic, physics, and rendering.
 * **Tiled** – level design and tile-based map system.
 * **Skin Composer** – custom GUI elements and menu design.
 * **JSON** – game data serialization for player progress.
 
 ## 🎨 Screenshots
-(Add cool in-game screenshots here!)
+will be soon...
 
 ## 🛠️ Setup & Usage
 ### 📌 Requirements:
@@ -42,7 +42,7 @@ To escape, you must navigate hazardous environments, fight cosmic creatures, and
 This game was initially developed as a personal project to improve game development skills using LibGDX and Java. It continues to evolve as part of a growing portfolio.
 
 ## 👥 Contributors
-Developed by Aleksandra Soboleva.
+Developed by Aleksandra Kenig.
 Special thanks to everyone who provided feedback and support!
 
 ### 📩 Feel free to reach out with questions or suggestions!
