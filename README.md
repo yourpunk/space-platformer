@@ -23,6 +23,10 @@
 ## 🎨 Screenshots
 
 *(coming soon... imagine stars exploding for now)*
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/a4192af3-2eca-46cf-892e-c739d978ca3b" width="300"/>
+  <img src="https://github.com/user-attachments/assets/cc2d5f8e-2156-4ff9-a02e-01ea84ac7dfc" width="300"/>
+</p>
 
 ## 🚀 How to Launch Into Space
 
@@ -37,7 +41,13 @@ git clone https://github.com/yourpunk/galaxix.git
 ```
 If your spaceship explodes on launch... open an issue. I'll cry with you.
 
+## 📜 License
+
+This project is licensed under a custom license based on Creative Commons.
+🛠️ License code: CC BY-NC-ND 4.0 + Academic Use Restriction
+
 ## 👤 Author
 🚀 Crafted by Aleksandra Kenig (aka [yourpunk](https://github.com/yourpunk)).
+
 ### ⋆⭒˚.⋆🔭 If you ever dreamed of fighting aliens with attitude — you're my kind of people. 
 💌 Wanna collab or throw some feedback? You know where to find me.
